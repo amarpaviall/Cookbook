@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function RecipeList() {
   const [items, setItems] = useState([]);
+  const [isLoding, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
@@ -10,9 +11,11 @@ function RecipeList() {
       .then((response) => response.json())
       .then((results) => {
         //console.log(results.categories);
+        setIsLoading(false);
         setItems(results.categories);
       })
       .catch(() => {
+        setIsLoading(false);
         setErrorMessage("There was an error");
       });
   }, []);
@@ -20,6 +23,7 @@ function RecipeList() {
   return (
     <div>
       <h1>Categories</h1>
+      {isLoding && <div>Loding .......</div>}
       {items && (
         <ul>
           {items.map((item) => (
