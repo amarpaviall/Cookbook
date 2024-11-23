@@ -1,0 +1,105 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Style for the unordered list */
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding from the list */
+  margin: 0; /* Remove margin */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-between; /* Space items evenly */
+}
+
+/* Style for each list item */
+li {
+  background-color: #f9f9f9; /* Light background for each category */
+  border-radius: 8px; /* Rounded corners */
+  margin: 10px; /* Add space between items */
+  width: calc(33% - 20px); /* 3 items per row, subtract margin space */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  overflow: hidden; /* Hide anything that goes outside the border */
+}
+
+li:hover {
+  transform: translateY(-5px); /* Slightly lift the item on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Style for the category image */
+img {
+  width: 100%; /* Make image fill the container */
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Ensure the image covers the container area */
+  border-top-left-radius: 8px; /* Rounded top corners */
+  border-top-right-radius: 8px; /* Rounded top corners */
+}
+
+/* Style for the category link */
+li a,
+li h3 {
+  display: block;
+  text-align: center;
+  font-size: 1.2em; /* Slightly larger text */
+  font-weight: bold; /* Make the category name bold */
+  color: #333; /* Dark gray text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 0; /* Vertical padding */
+  background-color: #ff8c00; /* Orange background color */
+  border-bottom-left-radius: 8px; /* Rounded bottom-left corners */
+  border-bottom-right-radius: 8px; /* Rounded bottom-right corners */
+  margin: 0;
+}
+
+li a:hover {
+  background-color: #e77b00; /* Darker orange on hover */
+}
+
+/* Style for the category description */
+li p {
+  font-size: 0.9em; /* Smaller text for description */
+  color: #666; /* Lighter gray text */
+  padding: 0 10px 10px; /* Padding around the text */
+  text-align: center; /* Center the description text */
+}
